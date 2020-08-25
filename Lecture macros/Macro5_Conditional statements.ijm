@@ -26,20 +26,26 @@
 // this function doesn't take any arguments).  The number is assigned to a variable.
 random_number = random();
 
-// We set a threshold value that the random number will be tested against
-threshold = 0.7;
+// We set a pair of threshold values that the random number will be tested against
+low_threshold = 0.3
+;
+high_threshold = 0.7;
 
-// Using a conditional statement to determine if the random number is less than 0.5.
-// If it is, this is stated in the log window.  Note how the string and number are
-// concatenated directly in the print function argument; this is permitted, but you 
-// need to be careful not to make code too difficult to understand (sometimes more
-// lines are better than fewer).
-if (random_number < threshold) {
-	print(random_number + " is less than " + threshold);
+// Using a conditional statement to determine if the random number is less than the 
+// low threshold or greater than the high threshold. The outcome is stated in the 
+// log window.  Note how the string and number are concatenated directly in the 
+// print function argument; this is permitted, but you need to be careful not to 
+// make code too difficult to understand (sometimes more lines are better than fewer).
+if (random_number <= low_threshold) {
+	print(random_number + " is less than (or equal to) " + low_threshold);
 	
-} else {
-	print(random_number + " is greater than (or equal to) " + threshold);
+} else if (random_number >= high_threshold) {
+	print(random_number + " is greater than (or equal to) " + high_threshold);
 	
+}
+ else {
+	print(random_number + " is between " + low_threshold + " and " + high_threshold);
+
 }
 
 // Adding a blank line to the log window
