@@ -1,26 +1,14 @@
-Dialog.create("Dialog Box Segmentation");
-Dialog.addMessage("this is nonsense...");
+Dialog.create("Dialog Box Testing");
+Dialog.addMessage("this is nonsense");
 
-arraySmooth=newArray("Gaussian Blur", "Median");
-arrayThresh=newArray("Otsu dark", "Li dark", "IJ_IsoData dark", "Huang dark");
-
-Dialog.addSlider("Smoothing Radius:",1,50,1);
-Dialog.addChoice("Smoothing Method?", arraySmooth, "Gaussian Blur");
-//Dialog.addSlider("Threshold Value:",1,255,100);
-Dialog.addChoice("Thresholding Method?", arrayThresh, "Otsu dark");
+arrayMonth = newArray("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+Dialog.addString("What day is it?", "Wednesday");
+Dialog.addSlider("What date is it?",1,31,14);
+Dialog.addChoice("What month is it?", arrayMonth, "January");
 Dialog.show();
 
-radius=Dialog.getNumber();
-method=Dialog.getChoice();
-//thresh=Dialog.getNumber();
-threshMethod=Dialog.getChoice();
+day = Dialog.getString();
+date = Dialog.getNumber();
+month = Dialog.getChoice();
 
-run("Z Project...", "projection=[Max Intensity]");
-run("Subtract Background...", "rolling=50 sliding");
-run("Enhance Contrast", "saturated=0.35");
-run(method+"...", "sigma="+radius);
-setAutoThreshold(threshMethod);
-run("Convert to Mask");
-run("Watershed");
-run("Analyze Particles...", "size=50-Infinity show=[Count Masks] display summarize");
-run("glasbey");
+print("The day today is " + day + " " + date + "th " + month);

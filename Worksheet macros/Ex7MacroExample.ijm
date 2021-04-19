@@ -1,14 +1,22 @@
-Dialog.create("Dialog Box Testing");
-Dialog.addMessage("this is nonsense");
+N = nResults();
 
-arrayMonth=newArray("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-Dialog.addString("What day is it?", "Wednesday");
-Dialog.addSlider("What date is it?",1,31,14);
-Dialog.addChoice("What month is it?", arrayMonth, "January");
-Dialog.show();
+for (i=0; i<N; i++) {
+	x1 = getResult("X",i);
+	y1 = getResult("Y",i);
+	nnDistance = 1000;
+	
+	for (j=0; j<N; j++) {
+		if (j != i) {				
+			x2 = getResult("X",j);
+			y2 = getResult("Y",j);
+			distance = sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+			
+			if (distance < nnDistance) {
+				nnDistance = distance;
+			}
+		}			
+	}
+	
+	setResult("NNDistance", i, nnDistance);
 
-day=Dialog.getString();
-date=Dialog.getNumber();
-month=Dialog.getChoice();
-
-print("The day today is: "+day+" "+date+"th "+month);
+}
