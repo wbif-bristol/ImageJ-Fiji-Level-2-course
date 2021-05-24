@@ -3,7 +3,7 @@ Dialog.addMessage("This is a macro, enter some parameters");
 
 arrayFilter = newArray("Median...","Mean...","Gaussian...");
 Dialog.addSlider("Rolling ball radius: ", 1, 100, 50);
-Dialog.addChoice("Filter type: ", arrayFilter, "Median")
+Dialog.addChoice("Filter type: ", arrayFilter, "Median...")
 Dialog.addSlider("Filter radius: ", 1, 10, 2);
 Dialog.addSlider("Size filter: ", 1,500, 150);
 Dialog.show();

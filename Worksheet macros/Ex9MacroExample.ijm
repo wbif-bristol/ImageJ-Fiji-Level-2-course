@@ -1,8 +1,8 @@
 Dialog.create("Dialog Box Segmentation");
 Dialog.addMessage("Parameters");
 
-arraySmooth=newArray("Gaussian Blur", "Median");
-arrayThresh=newArray("Otsu dark", "Li dark", "IJ_IsoData dark", "Huang dark");
+arraySmooth = newArray("Gaussian Blur", "Median");
+arrayThresh = newArray("Otsu dark", "Li dark", "IJ_IsoData dark", "Huang dark");
 
 Dialog.addSlider("Smoothing Radius:",1,50,1);
 Dialog.addChoice("Smoothing Method?", arraySmooth, "Gaussian Blur");
