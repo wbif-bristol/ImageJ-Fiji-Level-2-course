@@ -1,12 +1,19 @@
+N = nResults();
 
+x1 = getResult("X",0);
+y1 = getResult("Y",0);
+nnDistance = 1000;
 
-x1=getResult("X",0);
-y1=getResult("Y",0);
+for (j=0; j<N; j++) {
+	if (j != 0) {			
+		x2 = getResult("X",j);
+		y2 = getResult("Y",j);
+		distance = sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+		
+		if (distance < nnDistance) {
+			nnDistance = distance;
+		}
+	}			
+}
 
-x2=getResult("X",1);
-y2=getResult("Y",1);
-
-
-distance= sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
-
-print("the distance between the two nuclei is: "+distance+" pixels");
+print("The nearest neighbour distance is: " + nnDistance + " pixels");
