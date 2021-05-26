@@ -7,8 +7,8 @@ Materials for the "ImageJ/Fiji Level 2: Automation and batch processing using ma
 
 ----------
 NEW! Watch on YouTube:
-- [Part 1: General introduction to programming with a focus on ImageJ/Fiji macros (~78 mins)](https://www.youtube.com/watch?v=L-iRP3rh_1U)
-- [Part 2: Practical guide to writing macros in ImageJ/Fiji (~70 mins)](https://www.youtube.com/watch?v=r7PHfeX8nWk)
+- [Part 1: General introduction to programming with a focus on ImageJ/Fiji macros (~78 mins)](https://youtu.be/L-iRP3rh_1U)
+- [Part 2: Practical guide to writing macros in ImageJ/Fiji (~70 mins)](https://youtu.be/AlOtzQBflwc)
 ----------
 
 This workshop is suitable for anyone acquiring microscopy data as part of their research. Familiarity with ImageJ/Fiji will be necessary; in particular the content covered in the Introduction to ImageJ/Fiji course (materials available [here](https://github.com/wbif-bristol/ImageJ-Fiji-Level-1-course)). No prior knowledge of programming is necessary. The practical components are designed to enable attendees to work at their own pace.
